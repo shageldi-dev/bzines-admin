@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "banners",
+  "collectionName": "title_texts",
   "info": {
-    "singularName": "banner",
-    "pluralName": "banners",
-    "displayName": "Banner"
+    "singularName": "title-text",
+    "pluralName": "title-texts",
+    "displayName": "Title Text",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,15 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "text"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     },
     "short_description": {
       "pluginOptions": {
@@ -32,16 +41,26 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       }
+    },
+    "is_active": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "default": true
     },
     "type": {
       "pluginOptions": {
@@ -51,34 +70,13 @@
       },
       "type": "enumeration",
       "enum": [
-        "home_slider",
-        "home_banner"
+        "home_title",
+        "about_us_title",
+        "about_us_description",
+        "portfolio_title",
+        "our_services_title",
+        "contact_us_title"
       ]
-    },
-    "index": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer",
-      "default": 0
-    },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
-    "url": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
     }
   }
 }
